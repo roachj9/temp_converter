@@ -31,9 +31,9 @@ fn main() -> Result<(), &'static str> {
             println!("Temperature in Fahrenheit: {}°F", convert_to_f.round());
 
             Ok(())
-
-
-    } else if trimmed_input.ends_with('F') {
+    } 
+    
+    else if trimmed_input.ends_with('F') {
         temperature = match trimmed_input[..trimmed_input.len() - 1].parse() {
             Ok(num) => num,
             Err(_) => {
@@ -46,8 +46,9 @@ fn main() -> Result<(), &'static str> {
         println!("Temperature in Celcius: {}°C", convert_to_c.round());
         
         Ok(())
-
-    } else {
+    } 
+    
+    else {
         Err("Invalid input. Please enter a valid number followed by 'C' or 'F'.")
     }
 
